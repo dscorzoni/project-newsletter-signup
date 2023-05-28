@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    --primary-color: hsl(4, 100%, 67%);
+    --slate-grey: hsl(234, 29%, 20%);
+    --grey: hsl(210, 2%, 78%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--slate-grey)
+}
+
+main {
+    display: flex;
+    margin: auto;
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: 1.5rem;
+    max-width: 850px;
+    flex-wrap: wrap;
+
+}
+
+.left-pannel {
+    flex: 1.5;
+    padding: 4rem;
+    margin: auto;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+li {
+    display: flex;
+    gap: 0.7rem;
+    list-style: none;
+    margin: 0.5rem 0rem;
+}
+
+.right-pannel {
+    flex: 1;
+    text-align: right;
+}
+
+.img-desktop {
+    width: 350px;
+}
+
+.img-mobile {
+    width: 100%;
+    display: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+}
+
+label .error {
+    color: rgba(233, 3, 3, 0.824);
+    display: none;
+}
+
+label .error-show {
+    display: flex;
+    color: rgba(233, 3, 3, 0.824);
+}
+
+.email-input {
+    padding: 0.7rem;
+    border-radius: 0.3rem;
+    border: 1px solid var(--grey);
+    margin-bottom: 1rem;
+}
+
+.email-error {
+    padding: 0.7rem;
+    border-radius: 0.3rem;
+    margin-bottom: 1rem;
+    background-color: rgb(249, 220, 220);
+    color: rgb(211, 2, 2);
+    border: 1px solid rgb(211, 2, 2);
+}
+
+button {
+    padding: 0.7rem;
+    background-color: var(--slate-grey);
+    color: var(--white);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background: linear-gradient(to right, hsl(4, 93%, 78%), var(--primary-color));
+    box-shadow: 0rem 0.5rem .5rem hsla(4, 93%, 78%, 0.653);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Success Message Styling */
+.success-message {
+    /*display: flex;*/
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: auto;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 1.5rem;
+    max-width: 350px;
+    flex-wrap: wrap;
+}
+
+.success-message img {
+    width: 50px;
+    margin-bottom: 2rem;
+}
+
+.success-message h1 {
+    font-size: 40px;
+}
+
+.success-message p {
+    line-height: 1.5rem;
+}
+
+.success-message button {
+    width: 100%;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 850px) {
+    body {
+        background-color: var(--white);
+        height: 100vh;
+    }
+
+    main {
+      flex-direction: column-reverse;
+      border-radius: 0;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .img-desktop {
+        display: none;
+    }
+
+    .img-mobile {
+        display: block;
+    }
+    
+    .left-pannel {
+        padding: 1.5rem;
+        margin: 1rem 0 0 0;
+        overflow: hidden;
+    }
+
+    .right-pannel {
+        display: flex;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+    
+    label p {
+        font-size: 14px;
+    }
+
+    #email {
+        padding: 1rem 1.5rem;
+    }
+
+    button {
+        padding: 1rem 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .attribution {
+        display: none;
+    }
+
+    .success-message {
+        justify-content: space-between;
+        height: 100vh;
+        margin-top: 4rem;
+        padding: 1rem;
+        position: relative;
+    }
+
+    .success-message button {
+        width: 90%;
+        position: absolute;
+        bottom: 0;
+    }
+
+  }
+
+
+
+
+
+/* From FrontEnd Mentor */
+
+.attribution {
+    color: var(--white);
+    text-align: center;
+    padding: 0.5rem;
+  }
+  .attribution a {
+    color: var(--grey);
+    text-decoration: none;
+  }
+  .attribution a:hover {
+    text-decoration: underline;
+  }
