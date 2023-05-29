@@ -81,21 +81,29 @@ form {
     flex-direction: column;
 }
 
-label {
-    margin-top: 1rem;
-    font-weight: bold;
+.email-head {
     font-size: 13px;
+    padding: 1 0rem;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
-label .error {
-    color: rgba(233, 3, 3, 0.824);
-    display: none;
+label {
+    font-weight: bold;
+    margin-bottom: 1rem;
 }
 
-label .error-show {
-    display: flex;
+
+
+.error {
+    color: rgba(233, 3, 3, 0.824);
+    display: none;
+    margin: 0;
+}
+
+.email-head .error-show {
+    display: block;
     color: rgba(233, 3, 3, 0.824);
 }
 
